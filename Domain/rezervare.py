@@ -10,7 +10,8 @@ def creeaza_rezervare(id, nume, clasa, pret, checkin):
 
 
 def getId(rezervare):
-    return rezervare[0][1]
+    id = rezervare[0][1]
+    return id
 
 
 def getNume(rezervare):

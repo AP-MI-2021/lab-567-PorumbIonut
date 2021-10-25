@@ -1,4 +1,4 @@
-from Tests.testCRUD import testAdaugaRezervare, testStergeRezervare, testModificaRezervare
+from Tests.testCRUD import testAdaugaRezervare, testStergeRezervare, testModificaRezervare, testgetbyID
 from Tests.testDomeniu import testRezervare
 
 
@@ -7,3 +7,4 @@ def runAllTests():
     testAdaugaRezervare()
     testStergeRezervare()
     testModificaRezervare()
+    testgetbyID()

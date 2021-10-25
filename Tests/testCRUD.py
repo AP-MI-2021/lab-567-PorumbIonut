@@ -36,5 +36,8 @@ def testModificaRezervare():
     assert getNume(lista[0]) == "Porumb Ionut"
 
 def testgetbyID():
-    assert getbyID("1", [("1", "Porumb Ionut", "business", "120", "nu"),("2", "Bogdan", "business", "120", "nu")]) == [("1", "Porumb Ionut", "business", "120", "nu")]
-    assert getbyID("3", [("1", "Porumb Ionut", "business", "120", "nu"),("2", "Bogdan", "business", "120", "nu")]) == [("1", "Porumb Ionut", "business", "120", "nu"),("2", "Bogdan", "business", "120", "nu")]
+    lista = []
+    lista = adaugaRezervare("1", "Porumb Ionut", "business", "120", "nu", lista)
+    lista = adaugaRezervare("2", "Bogdan", "business", "120", "nu", lista)
+    assert getbyID("1", lista) == [('id: ', '1'), ('nume: ', 'Porumb Ionut'), ('clasa: ', 'business'), ('pret: ', '120'), ('checkin: ', 'nu')]
+    assert getbyID("3", lista) == [[('id: ', '1'), ('nume: ', 'Porumb Ionut'), ('clasa: ', 'business'), ('pret: ', '120'), ('checkin: ', 'nu')], [('id: ', '2'), ('nume: ', 'Bogdan'), ('clasa: ', 'business'), ('pret: ', '120'), ('checkin: ', 'nu')]]
