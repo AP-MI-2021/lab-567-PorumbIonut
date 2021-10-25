@@ -1,4 +1,4 @@
-from Domain.rezervare import toString
+#from Domain.rezervare import toString
 from Logic.CRUD import  stergeRezervare, modificaRezervare, adaugaRezervare
 
 def printMenu():
@@ -22,16 +22,16 @@ def uiStergeRezervare(lista):
     return stergeRezervare(id, lista)
 
 def uiModificaRezervare(lista):
-    id = input("Dati id-ul rezervarii de modificat")
-    nume = input("Dati noul nume")
-    clasa = input("Dati noua clasa")
-    pret = input("Dati pretul ")
+    id = input("Dati id-ul rezervarii de modificat: ")
+    nume = input("Dati noul nume: ")
+    clasa = input("Dati noua clasa: ")
+    pret = input("Dati pretul: ")
     checkin = input("Checkin: ")
     return modificaRezervare(id, nume, clasa, pret, checkin, lista)
 
 def showAll(lista):
     for rezervare in lista:
-        print(toString(rezervare))
+        print(rezervare)
 def runMenu(lista):
     while True:
         printMenu()

@@ -1,39 +1,31 @@
 def creeaza_rezervare(id, nume, clasa, pret, checkin):
-    # creeaza o rezervare si returneaza un dictionar ce retine rezervarea facuta
-    return {
-        "id": id,
-        "nume": nume,
-        "clasa": clasa,
-        "pret": pret,
-        "checkin": checkin
-    }
+    # creeaza o rezervare si returneaza o lista ce retine rezervarea facuta
+    lst = []
+    lst.append(("id: ", id))
+    lst.append(("nume: ", nume))
+    lst.append(("clasa: ", clasa))
+    lst.append(("pret: ", pret))
+    lst.append(("checkin: ", checkin))
+    return lst
 
 
 def getId(rezervare):
-    return rezervare["id"]
+    return rezervare[0][1]
 
 
 def getNume(rezervare):
-    return rezervare["nume"]
+    return rezervare[1][1]
 
 
 def getClasa(rezervare):
-    return rezervare["clasa"]
+    return rezervare[2][1]
 
 
 def getPret(rezervare):
-    return rezervare["pret"]
+    return rezervare[3][1]
 
 
 def getCheckin(rezervare):
-    return rezervare["checkin"]
+    return rezervare[4][1]
 
 
-def toString(rezervare):
-    return "id: {}, nume: {}, clasa: {}, pret: {}, checkin: {}".format(
-        getId(rezervare),
-        getNume(rezervare),
-        getClasa(rezervare),
-        getPret(rezervare),
-        getCheckin(rezervare)
-    )
