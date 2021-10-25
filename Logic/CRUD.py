@@ -27,4 +27,4 @@ def getbyID(id, lista):
     for rezervare in lista:
         if getId(rezervare) == id:
             return rezervare
-    return None
+    return lista

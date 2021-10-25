@@ -20,7 +20,6 @@ def testStergeRezervare():
 
     lista = stergeRezervare("1", lista)
     assert len(lista) == 1
-    assert getbyID("1", lista) is None
 
     lista = stergeRezervare("3", lista)
     assert len(lista) == 1
@@ -36,3 +35,6 @@ def testModificaRezervare():
     assert getPret(lista[0]) == "110"
     assert getNume(lista[0]) == "Porumb Ionut"
 
+def testgetbyID():
+    assert getbyID("1", [("1", "Porumb Ionut", "business", "120", "nu"),("2", "Bogdan", "business", "120", "nu")]) == [("1", "Porumb Ionut", "business", "120", "nu")]
+    assert getbyID("3", [("1", "Porumb Ionut", "business", "120", "nu"),("2", "Bogdan", "business", "120", "nu")]) == [("1", "Porumb Ionut", "business", "120", "nu"),("2", "Bogdan", "business", "120", "nu")]

@@ -28,4 +28,11 @@ def getPret(rezervare):
 def getCheckin(rezervare):
     return rezervare[4][1]
 
-
+def toString(rezervare):
+    return "Id: {}, Nume: {}, Clasa: {}, Pret: {}, Checkin: {}".format(
+        getId(rezervare),
+        getNume(rezervare),
+        getClasa(rezervare),
+        getPret(rezervare),
+        getCheckin(rezervare),
+    )

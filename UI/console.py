@@ -1,4 +1,4 @@
-#from Domain.rezervare import toString
+from Domain.rezervare import toString
 from Logic.CRUD import  stergeRezervare, modificaRezervare, adaugaRezervare
 
 def printMenu():
@@ -31,7 +31,7 @@ def uiModificaRezervare(lista):
 
 def showAll(lista):
     for rezervare in lista:
-        print(rezervare)
+        print(toString(rezervare))
 def runMenu(lista):
     while True:
         printMenu()
