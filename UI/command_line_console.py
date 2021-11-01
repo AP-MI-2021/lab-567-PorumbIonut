@@ -19,9 +19,12 @@ def oneLineAddShowallDelete(lineCommand, lista):
 def UiOneline(lista):
     lineCommand = input("Dati comenzile cu parametrii corespunzatori: ")
     return oneLineAddShowallDelete(lineCommand, lista)
-
+def Meniu():
+    print("1.Adauga o rezervare/sterge o rezervare /Afiseaza toate rezervarile")
+    print("x.Inchide  programul")
 def runMenu2(lista):
     while True:
+        Meniu()
         option = input("Alegeti optiunea: ")
         if option == "1":
             lista = UiOneline(lista)
