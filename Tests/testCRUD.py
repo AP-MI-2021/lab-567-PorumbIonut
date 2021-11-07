@@ -20,9 +20,6 @@ def testStergeRezervare():
 
     lista = stergeRezervare("1", lista)
     assert len(lista) == 1
-
-    lista = stergeRezervare("3", lista)
-    assert len(lista) == 1
     assert getbyID("2", lista) is not None
 
 def testModificaRezervare():
@@ -40,4 +37,3 @@ def testgetbyID():
     lista = adaugaRezervare("1", "Porumb Ionut", "business", "120", "nu", lista)
     lista = adaugaRezervare("2", "Bogdan", "business", "120", "nu", lista)
     assert getbyID("1", lista) == [('id: ', '1'), ('nume: ', 'Porumb Ionut'), ('clasa: ', 'business'), ('pret: ', '120'), ('checkin: ', 'nu')]
-    assert getbyID("3", lista) == [[('id: ', '1'), ('nume: ', 'Porumb Ionut'), ('clasa: ', 'business'), ('pret: ', '120'), ('checkin: ', 'nu')], [('id: ', '2'), ('nume: ', 'Bogdan'), ('clasa: ', 'business'), ('pret: ', '120'), ('checkin: ', 'nu')]]

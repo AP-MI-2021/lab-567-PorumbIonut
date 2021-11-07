@@ -12,11 +12,21 @@ def main():
     lista = []
     optiuni()
     optiune = input("Alege main-ul pe care vrei sa-l rulezi: ")
-    if optiune == "1":
-        runMenu(lista)
-    elif optiune == "2":
-        runMenu2(lista)
-    else:
-        print("Meniul selectat nu exista! Reincercati! ")
+
+    while True:
+        if optiune == "1":
+            runMenu(lista)
+        elif optiune == "2":
+            runMenu2(lista)
+        else:
+            print("Meniul selectat nu exista! Reincercati! ")
+        meniuNou = input("Vreti sa schimbati meniul? da/nu: ")
+        if meniuNou.lower() == "da":
+            optiuni()
+            optiune = input("Alege main-ul pe care vrei sa-l rulezi: ")
+        elif meniuNou.lower() == "nu":
+            break
+        else:
+            print("Meniul selectat nu exista! Reincercati! ")
 
 main()
